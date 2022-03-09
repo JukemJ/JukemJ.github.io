@@ -1,0 +1,147 @@
+/* *{ border: 1px solid black !important;} */
+
+body{
+  background: fixed linear-gradient(
+    140deg,
+    hsl(204deg 3% 34%) 0%,
+    hsl(204deg 2% 31%) 5%,
+    hsl(204deg 1% 28%) 14%,
+    hsl(38deg 0% 24%) 24%,
+    hsl(25deg 3% 19%) 37%,
+    hsl(27deg 14% 13%) 50%,
+    hsl(27deg 65% 28%) 64%,
+    hsl(28deg 76% 37%) 77%,
+    hsl(29deg 83% 43%) 89%,
+    hsl(30deg 88% 48%) 97%,
+    hsl(31deg 100% 52%) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1{
+  font-size: 2rem;
+}
+
+h2{
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+h3{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+section{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.intro h3{
+  dmargin-top: -100px;
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.intro img{
+  width: 50%;
+  margin: -150px auto;
+}
+
+.intro .container{
+  flex-direction: column;
+  align-items: center;
+}
+.about{
+  background: white;
+  padding: 10% 0;
+  color: gray;
+}
+.about img{
+  width: 300px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.about .container{
+}
+
+.skills{
+  color: white;
+  padding: 10% 0;
+  background: fixed linear-gradient(
+    325deg,
+    hsl(208deg 32% 10%) 0%,
+    hsl(201deg 22% 16%) 21%,
+    hsl(194deg 14% 21%) 30%,
+    hsl(186deg 9% 27%) 39%,
+    hsl(175deg 6% 34%) 46%,
+    hsl(163deg 4% 41%) 54%,
+    hsl(145deg 2% 48%) 61%,
+    hsl(117deg 1% 56%) 69%,
+    hsl(86deg 1% 63%) 79%,
+    hsl(60deg 1% 71%) 100%
+  );
+}
+
+.skills i{
+  width: 40px;
+  height: auto;
+  font-size: 4rem;
+}
+
+.skills .container{
+}
+
+.projects{
+  padding: 10% 0;
+  background: white;
+  text-align: center;
+}
+.projects .container{
+  display: flex;
+  flex-direction: column;
+}
+
+.projects .container .bottom{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact .container{
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+footer{
+  color: white;
+  margin-bottom: 30px;
+}
+
+footer li{
+  display: inline-block;
+}
+footer li a{
+  margin: 0 10px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: inherit;
+}

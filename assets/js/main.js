@@ -114,4 +114,55 @@
 
 			});
 
+	// Contact form handling
+		$(function() {
+			var $form = $('#contact-form'),
+				$success = $('#form-success'),
+				$error = $('#form-error');
+
+			$form.on('submit', function(e) {
+				e.preventDefault();
+				
+				// Hide previous messages
+				$success.hide();
+				$error.hide();
+				
+				// Basic validation
+				var name = $('#name').val().trim();
+				var email = $('#email').val().trim();
+				var message = $('#message').val().trim();
+				
+				if (!name || !email || !message) {
+					$error.find('p').text('Please fill in all required fields.');
+					$error.show();
+					return;
+				}
+				
+				if (message.length < 10) {
+					$error.find('p').text('Message must be at least 10 characters long.');
+					$error.show();
+					return;
+				}
+				
+				// Submit form data
+				var submitButton = $form.find('input[type="submit"]');
+				submitButton.prop('disabled', true).val('Sending...');
+				
+				$.ajax({
+					url: $form.attr('action'),
+					method: 'POST',
+					data: $form.serialize(),
+					dataType: 'json'
+				}).done(function() {
+					$success.show();
+					$form[0].reset();
+				}).fail(function() {
+					$error.find('p').text('Sorry, there was an error sending your message. Please try again.');
+					$error.show();
+				}).always(function() {
+					submitButton.prop('disabled', false).val('Send Message');
+				});
+			});
+		});
+
 })(jQuery);

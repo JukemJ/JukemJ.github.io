@@ -3219,3 +3219,143 @@ input, select, textarea {
 			}
 
 	}
+
+/* Accessibility and Form Enhancements */
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	#form-success {
+		padding: 1em;
+		background-color: rgba(76, 175, 80, 0.1);
+		border-left: 4px solid #4CAF50;
+		margin-top: 1em;
+		border-radius: 4px;
+	}
+
+	#form-error {
+		padding: 1em;
+		background-color: rgba(244, 67, 54, 0.1);
+		border-left: 4px solid #f44336;
+		margin-top: 1em;
+		border-radius: 4px;
+	}
+
+	/* Form input focus improvements */
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	textarea:focus {
+		outline: 2px solid #49bf9d;
+		outline-offset: 2px;
+	}
+
+	/* Smooth transitions for form elements */
+	input[type="submit"] {
+		transition: background-color 0.3s ease, transform 0.2s ease;
+	}
+
+	input[type="submit"]:hover {
+		transform: translateY(-2px);
+	}
+
+	input[type="submit"]:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+		transform: none;
+	}
+
+/* Project Showcase Enhancements */
+
+	.tech-stack {
+		margin: 1em 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+	}
+
+	.tech-badge {
+		background: linear-gradient(135deg, #49bf9d, #3a9d7f);
+		color: white;
+		padding: 0.25em 0.75em;
+		border-radius: 1.5em;
+		font-size: 0.8em;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.tech-badge:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+	}
+
+	.project-links {
+		margin-top: 1em;
+		display: flex;
+		gap: 0.75em;
+		flex-wrap: wrap;
+	}
+
+	.project-links .button.small {
+		padding: 0.5em 1em;
+		font-size: 0.9em;
+		min-width: auto;
+		margin: 0;
+	}
+
+	.project-links .button.disabled {
+		background-color: #ccc;
+		color: #666;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+	/* Work item improvements */
+	.work-item {
+		margin-bottom: 2.5em;
+		transition: transform 0.3s ease;
+	}
+
+	.work-item:hover {
+		transform: translateY(-5px);
+	}
+
+	.work-item h3 {
+		margin-bottom: 0.75em;
+	}
+
+	.work-item h3 a {
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.work-item h3 a:hover {
+		color: #49bf9d;
+	}
+
+	/* Responsive adjustments for tech badges */
+	@media screen and (max-width: 480px) {
+		.tech-stack {
+			justify-content: center;
+		}
+		
+		.project-links {
+			justify-content: center;
+		}
+		
+		.project-links .button.small {
+			flex: 1;
+			text-align: center;
+		}
+	}

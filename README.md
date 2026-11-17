@@ -51,13 +51,8 @@ To add a message to the trace, write a builder that returns `{ id, d }` (a 29-bi
 ```
 ├── index.html   # The whole site: markup, styles, and script
 ├── CNAME        # Custom domain for GitHub Pages
-├── assets/      # Legacy: from the earlier Strata-based version
-├── images/      # Legacy: from the earlier Strata-based version
-├── LICENSE.txt
 └── README.md
 ```
-
-The current page doesn't reference `assets/` or `images/`. They're kept from the previous HTML5 UP Strata version of the site.
 
 ## Browser support
 
